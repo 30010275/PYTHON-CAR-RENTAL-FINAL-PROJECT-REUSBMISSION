@@ -3,21 +3,22 @@ from models.database import SessionLocal
 from models.vehicle import Vehicle
 from models.rental import Rental
 
-def list_vehicles():  
-    # Function to list all available vehicles
+def listAvailableVehicles():  
+    # Let's see what rides we have available!
     db = SessionLocal()
     vehicles = db.query(Vehicle).all()
     db.close()
     
     vehicle_list = []
     for vehicle in vehicles:
-        # Check if the vehicle is currently rented
+        # Is this vehicle ready to roll?
         rental_status = "Available" if vehicle.available else "Not Available (Rented)"
-        vehicle_list.append(f"{vehicle.id}: {vehicle.brand} ({vehicle.type}) - {rental_status}")
+        vehicle_list.append(f"{vehicle.id}: {vehicle.brand} ({vehicle.vehicle_type}) - Status: {rental_status}")
     
     return vehicle_list
-def add_vehicle(type, brand):
+
+def addVehicle(vehicle_type, vehicle_brand, vehicle_year, vehicle_color):
     db = SessionLocal()
-    vehicle = Vehicle.create(type=type, brand=brand)
+    vehicle = Vehicle.create(vehicle_type=vehicle_type, brand=vehicle_brand)  # Updated to use vehicle_type
     db.close()
-    return vehicle
+    return vehicle  # Vehicle added successfully, right?

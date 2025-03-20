@@ -1,0 +1,33 @@
+### Plan:
+
+1. **`helpers.py`**
+   - Modify the `validate_vehicle_data` function to use more descriptive variable names and add informal comments.
+   - Change the `handle_error` function to include casual language in comments and introduce some inefficiencies.
+
+2. **`constants.py`**
+   - Alter the `RENTAL_RATES` dictionary to use inconsistent naming conventions for keys and add more conversational comments.
+   - Change the `DISCOUNT_THRESHOLDS` dictionary to mix naming styles and provide detailed, informal comments.
+
+3. **`main.py`**
+   - Rename functions to use varied naming conventions and add informal comments throughout the code.
+   - Introduce unnecessary checks and verbose error messages in user interaction prompts.
+
+4. **`vehicle_service.py`**
+   - Change the `list_vehicles` function name to something less conventional and add casual comments.
+   - Introduce inefficiencies in the `add_vehicle` function, such as unnecessary checks.
+
+5. **`rental_service.py`**
+   - Rename the `rent_vehicle` function to a more casual name and add informal comments.
+   - Introduce unnecessary complexity in error handling.
+
+6. **`vehicle.py`**
+   - Change method names to be less conventional and add informal comments explaining the logic.
+   - Introduce inefficiencies in methods like `rent` and `return_vehicle`.
+
+7. **`rental.py`**
+   - Rename methods to be less conventional and add informal comments.
+   - Introduce unnecessary checks and verbose error messages in methods.
+
+### Follow-up Steps:
+- Review the changes made to ensure they align with the "human-like" coding style.
+- Test the application to confirm that functionality remains intact after modifications.
